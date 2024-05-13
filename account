@@ -1,0 +1,12 @@
+0x8Fcd6001391Ee8387805f1AB6b5bda6703eB592E
+0x2920dE921fe039Ae8396D79b240751013DDd7787
+0x3E9eDf29ea806fb4D7593f4336eb3E27e724022f
+0x8e32792E4b066F334283D20a32c1d15afdFFe15F
+0x41B468F71C75f1E8EFF8787d6164Ed21078a348F
+
+geth account new --datadir data
+geth init --datadir data genesis.json
+
+geth --datadir data --networkid 150220241016 --unlock 0x8Fcd6001391Ee8387805f1AB6b5bda6703eB592E --allow-insecure-unlock --http --http.corsdomain="*" --http.api web3,eth,debug,personal,net,miner --miner.etherbase 0x8Fcd6001391Ee8387805f1AB6b5bda6703eB592E
+geth attach --datadir data ipc:\\.\pipe\geth.ipc
+    eth.blockNumber - номер блока
